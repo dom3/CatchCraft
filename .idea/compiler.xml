@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.jorel/commandapi-annotations/9.0.3/41f35497424b4e6960af143ee6abab161ee0916d/commandapi-annotations-9.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.jorel/commandapi-bukkit-core/9.0.3/f540cfe57bf3ded44b1fd19e69b974714a5123c1/commandapi-bukkit-core-9.0.3.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/dev.jorel/commandapi-core/9.0.3/f9cff190dc5c6a0af91985fb6777b9f259c45ce0/commandapi-core-9.0.3.jar" />
+        </processorPath>
+        <module name="CatchCraft.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>
