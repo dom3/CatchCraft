@@ -1,4 +1,4 @@
 name: CatchCraft
 version: '${version}'
 main: xyz.domcore.catchcraft.CatchCraft
-api-version: 1.20
+api-version: '1.20'

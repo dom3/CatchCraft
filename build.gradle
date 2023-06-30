@@ -20,7 +20,7 @@ repositories {
 
 dependencies {
     compileOnly "org.spigotmc:spigot-api:1.20.1-R0.1-SNAPSHOT"
-    compileOnly "dev.jorel:commandapi-bukkit-core:9.0.2"
+    compileOnly "dev.jorel:commandapi-bukkit-core:9.0.3"
     compileOnly "dev.jorel:commandapi-annotations:9.0.3"
     annotationProcessor "dev.jorel:commandapi-annotations:9.0.3"
 }
