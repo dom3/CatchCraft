@@ -4,33 +4,32 @@ import org.bukkit.ChatColor;
 
 import java.util.ArrayList;
 
-public class Beginner extends CustomRod{
-
+public class Skilled extends CustomRod{
     @Override
     public String id() {
-        return "beginner";
+        return "skilled";
     }
 
     @Override
     public String name() {
-        return "Beginner";
+        return "Skilled";
     }
 
     @Override
     public ArrayList<String> bio() {
-        ArrayList<String> bio = new ArrayList<>();
-        bio.add("The beginning of your adventure");
-        bio.add("...the very beginning.");
-        return bio;
+        ArrayList<String> list = new ArrayList<>();
+        list.add("You are finally not bad!");
+        list.add("Good luck on your adventure!");
+        return list;
     }
 
     @Override
     public float luck() {
-        return 0.1f;
+        return 0.3f;
     }
 
     @Override
     public ChatColor color() {
-        return ChatColor.GREEN;
+        return ChatColor.BLUE;
     }
 }

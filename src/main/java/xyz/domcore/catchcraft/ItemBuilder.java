@@ -12,7 +12,7 @@ public class ItemBuilder {
 
     ItemStack stack;
 
-    public ItemBuilder(Material material,String name, ArrayList<String> lore) {
+    public ItemBuilder(Material material,String id,String name, ArrayList<String> lore) {
         ItemStack item = new ItemStack(material);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(ChatColor.GRAY + name);
@@ -24,6 +24,7 @@ public class ItemBuilder {
         }
         l.add("");
         l.add(ChatColor.GRAY + "+---------+");
+        l.add(id);
         meta.setLore(l);
         item.setItemMeta(meta);
         stack = item;

@@ -23,7 +23,7 @@ public abstract class CustomRod {
     /**
      * The fishing rod's luck
      */
-    public abstract int luck();
+    public abstract float luck();
 
     public abstract ChatColor color();
 }

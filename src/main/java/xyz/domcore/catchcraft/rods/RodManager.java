@@ -30,14 +30,14 @@ public final class RodManager {
     public void init() {
         plugin.getLogger().log(Level.INFO,"Loading rods...");
         rods.add(new Beginner());
+        rods.add(new Talented());
+        rods.add(new Skilled());
     }
 
     public CustomRod getRodById(String id) {
         CustomRod r = null;
         for (CustomRod rod : rods) {
-            plugin.getLogger().log(Level.INFO,"Matching " + rod.id());
             if (Objects.equals(rod.id(), id)) {
-                plugin.getLogger().log(Level.INFO,"Found rod! " + rod.id());
                 r=rod;
             }
         }
@@ -48,7 +48,7 @@ public final class RodManager {
         CustomRod rod = getRodById(id);
         if (rod != null) {
             plugin.getLogger().log(Level.INFO,"Giving " + rod.name() + " rod to " + player.getName());
-            ItemBuilder rodItem = new ItemBuilder(Material.FISHING_ROD, rod.color() + rod.name() + " Rod",rod.bio());
+            ItemBuilder rodItem = new ItemBuilder(Material.FISHING_ROD, rod.id(),rod.color() + rod.name() + " Rod",rod.bio());
             player.getInventory().addItem(rodItem.getStack());
         } else {
             player.sendMessage(CatchCraft.error("Rod does not exist!"));

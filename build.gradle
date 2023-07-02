@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'xyz.domcore'
-version = '1.0.0'
+version = '1.0.1'
 
 repositories {
     mavenCentral()
@@ -15,6 +15,7 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
+    maven { url 'https://jitpack.io' }
     maven { url = "https://repo.codemc.org/repository/maven-public/" }
 }
 
@@ -23,6 +24,8 @@ dependencies {
     compileOnly "dev.jorel:commandapi-bukkit-core:9.0.3"
     compileOnly "dev.jorel:commandapi-annotations:9.0.3"
     annotationProcessor "dev.jorel:commandapi-annotations:9.0.3"
+    compileOnly "com.github.MilkBowl:VaultAPI:1.7.1"
+    implementation 'com.github.stefvanschie.inventoryframework:IF:0.10.11'
 }
 
 def targetJavaVersion = 17

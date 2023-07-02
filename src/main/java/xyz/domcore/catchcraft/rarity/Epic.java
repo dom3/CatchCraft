@@ -2,34 +2,34 @@ package xyz.domcore.catchcraft.rarity;
 
 import org.bukkit.ChatColor;
 
-public class Common extends Rarity{
+public class Epic extends Rarity{
     @Override
     public String id() {
-        return "common";
+        return "epic";
     }
 
     @Override
     public String name() {
-        return "Common";
+        return "Epic";
     }
 
     @Override
     public ChatColor color() {
-        return ChatColor.GREEN;
+        return ChatColor.LIGHT_PURPLE;
     }
 
     @Override
     public float chance() {
-        return 9;
+        return 7;
     }
 
     @Override
     public float mulitplier() {
-        return 1;
+        return 2f;
     }
 
     @Override
     public long speed() {
-        return 7;
+        return 5;
     }
 }

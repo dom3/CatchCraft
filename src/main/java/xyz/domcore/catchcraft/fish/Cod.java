@@ -6,22 +6,23 @@ import xyz.domcore.catchcraft.rarity.*;
 
 import java.util.ArrayList;
 
-public class Bass extends Fish{
+public class Cod extends Fish{
     @Override
     public String id() {
-        return "bass";
+        return "cod";
     }
 
     @Override
     public String name() {
-        return "Bass";
+        return "Cod";
     }
 
     @Override
     public ArrayList<String> lore() {
-        ArrayList<String> array = new ArrayList<>();
-        array.add("A big bass that can rule the world!");
-        return array;
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A pretty common fish");
+        list.add("one of the most popular in the world!");
+        return list;
     }
 
     @Override
@@ -36,12 +37,12 @@ public class Bass extends Fish{
 
     @Override
     public Vector2 sizes() {
-        return new Vector2(100,500);
+        return null;
     }
 
     @Override
     public float chance() {
-        return 9f;
+        return 8f;
     }
 
     @Override

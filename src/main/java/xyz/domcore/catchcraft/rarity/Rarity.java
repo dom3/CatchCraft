@@ -6,5 +6,8 @@ public abstract class Rarity {
     public abstract String id();
     public abstract String name();
     public abstract ChatColor color();
-    public abstract int mulitplier();
+    public abstract float chance();
+    public abstract float mulitplier();
+
+    public abstract long speed();
 }
