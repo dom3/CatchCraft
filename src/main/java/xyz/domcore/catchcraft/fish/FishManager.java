@@ -39,6 +39,7 @@ public class FishManager {
         fishes.add(new Bass());
         fishes.add(new Cod());
         fishes.add(new Salmon());
+        fishes.add(new Artifact());
 
         rarities.add(new Common());
         rarities.add(new Rare());

@@ -28,7 +28,7 @@ public class Mythic extends Rarity{
         return 5f;
     }
 
-    @Override
+     @Override
     public long speed() {
         return 3;
     }

@@ -2,6 +2,7 @@ package xyz.domcore.catchcraft;
 
 import dev.jorel.commandapi.CommandAPI;
 import dev.jorel.commandapi.CommandAPIBukkitConfig;
+import dev.jorel.commandapi.CommandAPIConfig;
 import net.milkbowl.vault.chat.Chat;
 import net.milkbowl.vault.economy.Economy;
 import net.milkbowl.vault.permission.Permission;
@@ -14,8 +15,10 @@ import xyz.domcore.catchcraft.commands.admin.GiveRodCommand;
 import xyz.domcore.catchcraft.commands.admin.SetMiddlePointCommand;
 import xyz.domcore.catchcraft.commands.player.SellCommand;
 import xyz.domcore.catchcraft.fish.FishManager;
+import xyz.domcore.catchcraft.items.ItemManager;
 import xyz.domcore.catchcraft.listeners.FishListener;
 import xyz.domcore.catchcraft.listeners.GameListener;
+import xyz.domcore.catchcraft.listeners.ItemListeners;
 import xyz.domcore.catchcraft.rods.RodManager;
 
 public final class CatchCraft extends JavaPlugin {
@@ -42,6 +45,8 @@ public final class CatchCraft extends JavaPlugin {
         RodManager.getInstance().init();
         // Load fishes
         FishManager.getInstance().init();
+        // Load custom items
+        ItemManager.getInstance().init();
 
         //ADMIN CMDS
         CommandAPI.registerCommand(GiveRodCommand.class);
@@ -52,6 +57,7 @@ public final class CatchCraft extends JavaPlugin {
         //Register listeners
         getServer().getPluginManager().registerEvents(new FishListener(),this);
         getServer().getPluginManager().registerEvents(new GameListener(),this);
+        getServer().getPluginManager().registerEvents(new ItemListeners(), this);
 
         if (!setupEconomy() ) {
             getLogger().severe(String.format("[%s] - Disabled due to no Vault dependency found!", getDescription().getName()));

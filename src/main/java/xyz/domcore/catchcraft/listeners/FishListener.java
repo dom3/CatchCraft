@@ -30,6 +30,7 @@ public class FishListener implements Listener {
     JavaPlugin plugin = CatchCraft.getPlugin(CatchCraft.class);
     @EventHandler
     public void onFish(PlayerFishEvent event) {
+        event.getCaught().remove();
         float luck = 0;
 
         ItemStack rodItem = event.getPlayer().getInventory().getItemInMainHand();
@@ -42,13 +43,13 @@ public class FishListener implements Listener {
         luck += fixed;
 
         if (event.getState() == PlayerFishEvent.State.CAUGHT_FISH) {
+            event.getCaught().remove();
             Fish fish = FishManager.getInstance().getRandomFish(luck);
             Rarity rarity = FishManager.getInstance().getRandomRarity(fish,luck);
             if (!(event.getPlayer().getInventory().getItemInMainHand().getType() == Material.FISHING_ROD)) {
                 event.setCancelled(true);
                 event.getPlayer().sendMessage(CatchCraft.error("Please keep the fishing rod in your hand."));
             }
-            event.getCaught().remove();
             FishManager.getInstance().states.put(event.getPlayer(),new FishState(fish,rarity));
 
             FishState state = FishManager.getInstance().states.get(event.getPlayer());

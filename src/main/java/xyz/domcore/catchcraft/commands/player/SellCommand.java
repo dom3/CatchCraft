@@ -27,9 +27,9 @@ public class SellCommand {
                         Rarity rarity = FishManager.getInstance().getRarityById(id[0]);
                         Fish fish = FishManager.getInstance().getFishById(id[1]);
 
-                        int value = (int)(fish.value()*rarity.mulitplier());
+                        int value = (int)(fish.value()*rarity.mulitplier())*player.getInventory().getItemInMainHand().getAmount();
                         CatchCraft.getEconomy().depositPlayer(player,value);
-                        player.sendMessage(ChatColor.GREEN + "Sold " + rarity.color() + rarity.name() + " " + fish.name() + " " + ChatColor.GREEN + " for " + value + "!");
+                        player.sendMessage(ChatColor.GREEN + "Sold x" + player.getInventory().getItemInMainHand().getAmount() + " " + rarity.color() + rarity.name() + " " + fish.name() + " " + ChatColor.GREEN + " for " + value + "!");
                         ItemStack stack = player.getInventory().getItemInMainHand();
                         stack.setAmount(1);
                         player.getInventory().remove(stack);

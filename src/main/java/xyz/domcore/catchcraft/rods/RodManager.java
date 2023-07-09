@@ -32,6 +32,10 @@ public final class RodManager {
         rods.add(new Beginner());
         rods.add(new Talented());
         rods.add(new Skilled());
+        rods.add(new Intermediate());
+        rods.add(new Advanced());
+        rods.add(new Expert());
+        rods.add(new AdminRod());
     }
 
     public CustomRod getRodById(String id) {
